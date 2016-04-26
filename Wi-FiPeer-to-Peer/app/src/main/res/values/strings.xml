@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Wi-Fi Peer-to-Peer</string>
+
+    <string name="discover_peers">Discover Peers</string>
+    <string name="connect_to_peer">Connect to Peers</string>
+</resources>
