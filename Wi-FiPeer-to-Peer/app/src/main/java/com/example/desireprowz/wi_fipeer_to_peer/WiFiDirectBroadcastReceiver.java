@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.net.wifi.p2p.WifiP2pManager.PeerListListener;
 import android.net.wifi.p2p.WifiP2pManager.Channel;
+import android.util.Log;
 
 /**
  * Created by DesireProwz on 26-4-2016.
@@ -34,8 +35,10 @@ public class WiFiDirectBroadcastReceiver extends BroadcastReceiver {
             int state = intent.getIntExtra(WifiP2pManager.EXTRA_WIFI_STATE, -1);
             if (state == mManager.WIFI_P2P_STATE_ENABLED) {
                 //Wi-Fi Direct is enabled
+                Log.i("Wi-Fi Direct: ", "Enabled");
             } else {
                 //Wi-Fi Direct is disabled
+                Log.i("Wi-Fi Direct: ", "Disabled");
             }
 
         } else if (mManager.WIFI_P2P_PEERS_CHANGED_ACTION.equals(action)) {
